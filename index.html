@@ -4,16 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hockey Ground</title>
+
+    <!-- cdn link of DaisyUi -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css"/><script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind's custom code -->
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: "#da373d",
+                button: "#FF4240",
+                "desc-color": "rgba(19, 19, 24, 0.60)",
+              },
+            },
+          },
+        };
+      </script>
+
+    <!-- font related links -->
+
+    <script src="https://kit.fontawesome.com/d7b7563d24.js"
+    crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"/>
+
+    <style>
+        .font-manrope {
+          font-family: "Manrope", sans-serif;
+        }
+      </style>
+
 </head>
-<body>
-    <header>
+<body class="font-manrope">
+    <header class="px-4 lg:px-0 container mx-auto">
+        <nav class="my-3">
+            <div class="navbar p-0 lg:p-0 bg-base-100 justify-center items-center">
+              <div class="navbar-start">
+                <div class="dropdown">
+                  <div
+                    tabindex="0"
+                    role="button"
+                    class="btn btn-ghost pl-0 lg:hidden">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h8m-8 6h16"/>
+                    </svg>
+                    </div>
+                  <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li class="text-base text-button font-bold"><a>Home</a></li>
+                    <li class="text-base"><a>About</a></li>
+                    <li class="text-base"><a>Pages</a></li>
+                    <li class="text-base"><a>Blog</a></li>
+                    <li class="text-base"><a>Contact</a></li>
+                  </ul>
+                </div>
+                <a class="text-2xl lg:text-4xl font-extrabold"
+                  >Hockey<span class="text-button">&#x2019;</span>s</a
+                >
+              </div>
+              <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                  <li class="text-base text-button font-bold"><a>Home</a></li>
+                  <li class="text-base"><a>About</a></li>
+                  <li class="text-base"><a>Pages</a></li>
+                  <li class="text-base"><a>Blog</a></li>
+                  <li class="text-base"><a>Contact</a></li>
+                </ul>
+              </div>
+              <div class="navbar-end items-center">
+                <i
+                  class="text-xl hidden lg:inline text-[#89898B] mr-6 fa-solid fa-magnifying-glass"
+                ></i>
+                <a class="btn bg-button text-lg lg:text-xl text-white font-bold"
+                  >Get Ticket</a
+                >
+              </div>
+            </div>
+            </nav>
+
+            <section class="relative flex flex-col lg:grid gap-4">
+                <div>
+                  <div class="carousel w-full h-[200px] lg:h-[550px]">
+                    <!-- Slider 1 -->
+                    <div id="slide1" class="carousel-item relative w-full">
+                      <img src="Images/1.png" class="w-full bg-center bg-contain" />
+                      <div
+                        class="absolute flex justify-between transform items-center -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a
+                          href="#slide2"
+                          class="btn min-h-0 h-6 lg:min-h-[48px] w-6 lg:w-[48px] btn-circle border-0 text-white bg-black"
+                          >❮<a>
+                        <a
+                          href="#slide2"
+                          class="btn min-h-0 h-6 lg:min-h-[48px] w-6 lg:w-[48px] btn-circle border-0 text-white bg-black"
+                          >❯</a>
+                      </div>
+                    </div>
+                    <!-- Slider 2 -->
+                    <div id="slide2" class="carousel-item relative w-full">
+                      <img src="Images/2.png" class="w-full bg-center bg-contain" />
+                      <div
+                        class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a
+                          href="#slide1"
+                          class="btn min-h-0 h-6 lg:min-h-[48px] w-6 lg:w-[48px] btn-circle border-0 text-white bg-black"
+                          >❮</a
+                        >
+                        <a
+                          href="#slide1"
+                          class="btn min-h-0 h-6 lg:min-h-[48px] w-6 lg:w-[48px] btn-circle border-0 text-white bg-black"
+                          >❯</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Meet all hero section -->
+                <div
+                  class="relative w-ful lg:w-auto lg:absolute lg:bottom-10 rounded-2xl lg:right-8 p-8 bg-black">
+                  <h2 class="text-white text-lg lg:text-2xl font-extrabold">
+                    Meet all the heroes from the field
+                  </h2>
+                  <p
+                    class="mt-2 lg:mt-4 text-white w-full lg:w-[502px] text-[14px] lg:text-base font-medium">
+                    Discover the journeys of hockey's champions in our 'Meet the Heroes' zone, celebrating triumphs and resilience.
+                  </p>
+                </div>
+              </section>
 
     </header>
     <main>
 
     </main>
     <footer>
-        
+
     </footer>
 </body>
 </html>
